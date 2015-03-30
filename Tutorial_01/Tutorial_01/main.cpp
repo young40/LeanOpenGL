@@ -8,7 +8,11 @@
 
 #include <iostream>
 
+#include <OpenGL/gl3.h> //OpenGL3 以上需要include这个.
+
 #include "glfw3.h"
+
+#include "shader.hpp"
 
 extern "C"
 {
@@ -29,16 +33,15 @@ int main(int argc, const char * argv[]) {
     glfwSetErrorCallback(test_error_cb);
 
     
-    glfwWindowHint(GLFW_SAMPLES, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
+    glfwWindowHint(GLFW_SAMPLES, 4); // 注意glfw3 和之前版本API差异
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
     
     window = glfwCreateWindow(640, 480, "", NULL, nullptr);
-    
-    if (!window) {
+     if (!window) {
         
         glfwTerminate();
         
@@ -47,9 +50,52 @@ int main(int argc, const char * argv[]) {
     
     glfwMakeContextCurrent(window);
     
+    glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
+    
+    
+    GLuint VertexArrayID;
+    glGenVertexArrays(1, &VertexArrayID);
+    glBindVertexArray(VertexArrayID);
+    
+    static const GLfloat g_vertex_buffer_data[] = {
+        -1.0f,  -1.0f,  0.0f,
+        1.0f,   -1.0f,  0.0f,
+        0.0f,   1.0f,   0.0f,
+        
+    };
+    
+    GLuint vertexBuffer;
+    
+    glGenBuffers(1, &vertexBuffer);
+    
+    glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
+    
+    glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+    
+    
+    
+    GLuint programID = LoadShaders("T1.vs", "T1.fs");
+   
+    
+    
     while (!glfwWindowShouldClose(window)) {
 //        glfwSwapBuffers(window);
+        glClear(GL_COLOR_BUFFER_BIT);
+        glUseProgram(programID);
         
+        glEnableVertexAttribArray(0);
+        
+        glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
+        
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (void*)0);
+        
+        glDrawArrays(GL_TRIANGLES, 0, 3);
+        
+        glDisableVertexAttribArray(0);
+        
+        
+        
+        glfwSwapBuffers(window);
         glfwPollEvents();
     }
     

@@ -13,6 +13,9 @@
 		D55133231AC1B3B4003614C5 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55133221AC1B3B4003614C5 /* IOKit.framework */; };
 		D55133251AC1B3BF003614C5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55133241AC1B3BF003614C5 /* CoreVideo.framework */; };
 		D558E6961AB1ED680036FE25 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D558E6951AB1ED680036FE25 /* main.cpp */; };
+		D583AC441AC85DB10053E847 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D583AC421AC85DB10053E847 /* shader.cpp */; };
+		D583AC481AC85E950053E847 /* T1.vs in Resources */ = {isa = PBXBuildFile; fileRef = D583AC461AC85E250053E847 /* T1.vs */; };
+		D583AC491AC85E950053E847 /* T1.fs in Resources */ = {isa = PBXBuildFile; fileRef = D583AC451AC85E120053E847 /* T1.fs */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,6 +41,10 @@
 		D55133241AC1B3BF003614C5 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		D558E6921AB1ED680036FE25 /* Tutorial_01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Tutorial_01; sourceTree = BUILT_PRODUCTS_DIR; };
 		D558E6951AB1ED680036FE25 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D583AC421AC85DB10053E847 /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shader.cpp; sourceTree = "<group>"; };
+		D583AC431AC85DB10053E847 /* shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shader.hpp; sourceTree = "<group>"; };
+		D583AC451AC85E120053E847 /* T1.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = T1.fs; sourceTree = "<group>"; };
+		D583AC461AC85E250053E847 /* T1.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = T1.vs; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +75,10 @@
 		D558E6891AB1ED680036FE25 = {
 			isa = PBXGroup;
 			children = (
+				D583AC461AC85E250053E847 /* T1.vs */,
+				D583AC451AC85E120053E847 /* T1.fs */,
+				D583AC421AC85DB10053E847 /* shader.cpp */,
+				D583AC431AC85DB10053E847 /* shader.hpp */,
 				D55133241AC1B3BF003614C5 /* CoreVideo.framework */,
 				D55133221AC1B3B4003614C5 /* IOKit.framework */,
 				D55133201AC1B3A9003614C5 /* Cocoa.framework */,
@@ -106,6 +117,7 @@
 				D558E68E1AB1ED680036FE25 /* Sources */,
 				D558E68F1AB1ED680036FE25 /* Frameworks */,
 				D558E6901AB1ED680036FE25 /* CopyFiles */,
+				D583AC471AC85E8C0053E847 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -147,11 +159,24 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		D583AC471AC85E8C0053E847 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D583AC481AC85E950053E847 /* T1.vs in Resources */,
+				D583AC491AC85E950053E847 /* T1.fs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D558E68E1AB1ED680036FE25 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D583AC441AC85DB10053E847 /* shader.cpp in Sources */,
 				D558E6961AB1ED680036FE25 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
