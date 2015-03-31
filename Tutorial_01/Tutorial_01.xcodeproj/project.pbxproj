@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D538848C1AC99F70003048F0 /* glm in Resources */ = {isa = PBXBuildFile; fileRef = D538848B1AC99F70003048F0 /* glm */; };
 		D55133161AC1B251003614C5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55133151AC1B251003614C5 /* OpenGL.framework */; };
 		D551331B1AC1B2AB003614C5 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D551331A1AC1B2AB003614C5 /* libglfw3.a */; };
 		D55133211AC1B3A9003614C5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55133201AC1B3A9003614C5 /* Cocoa.framework */; };
@@ -31,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D538848B1AC99F70003048F0 /* glm */ = {isa = PBXFileReference; lastKnownFileType = folder; path = glm; sourceTree = "<group>"; };
 		D55133131AC1B237003614C5 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = "../../../Users/young40/Downloads/glfw-3.1.1/build/src/libglfw3.a"; sourceTree = "<group>"; };
 		D55133151AC1B251003614C5 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		D551331A1AC1B2AB003614C5 /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw3.a; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		D558E6891AB1ED680036FE25 = {
 			isa = PBXGroup;
 			children = (
+				D538848B1AC99F70003048F0 /* glm */,
 				D583AC461AC85E250053E847 /* T1.vs */,
 				D583AC451AC85E120053E847 /* T1.fs */,
 				D583AC421AC85DB10053E847 /* shader.cpp */,
@@ -164,6 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D538848C1AC99F70003048F0 /* glm in Resources */,
 				D583AC481AC85E950053E847 /* T1.vs in Resources */,
 				D583AC491AC85E950053E847 /* T1.fs in Resources */,
 			);

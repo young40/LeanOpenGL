@@ -14,6 +14,12 @@
 
 #include "shader.hpp"
 
+#include "../glm/glm.hpp"
+#include "../glm/gtc/matrix_transform.hpp"
+///Work/LeanOpenGL/Tutorial_01/glm/glm.hpp
+
+using namespace glm;
+
 extern "C"
 {
     static void test_error_cb (int error, const char *description)
@@ -34,8 +40,8 @@ int main(int argc, const char * argv[]) {
 
     
     glfwWindowHint(GLFW_SAMPLES, 4); // 注意glfw3 和之前版本API差异
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 1);
     glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
     glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
     
@@ -57,6 +63,7 @@ int main(int argc, const char * argv[]) {
     glGenVertexArrays(1, &VertexArrayID);
     glBindVertexArray(VertexArrayID);
     
+    
     static const GLfloat g_vertex_buffer_data[] = {
         -1.0f,  -1.0f,  0.0f,
         1.0f,   -1.0f,  0.0f,
@@ -77,11 +84,28 @@ int main(int argc, const char * argv[]) {
     GLuint programID = LoadShaders("T1.vs", "T1.fs");
    
     
+    GLuint MatrixID = glGetUniformLocation(programID, "MVP");
+    
+
+    
+    mat4 Projection = glm::perspective(45.0f, 4.0f/3.0f, 0.1f, 100.0f);
+    
+    mat4 View = glm::lookAt(vec3(4, 3, 3),
+                            vec3(0, 0, 0),
+                            vec3(0, 1, 0));
+    
+    mat4 Model = mat4(1.0f);
+    
+    mat4 MVP = Projection * View * Model;
+    
+    
     
     while (!glfwWindowShouldClose(window)) {
 //        glfwSwapBuffers(window);
         glClear(GL_COLOR_BUFFER_BIT);
         glUseProgram(programID);
+        
+        glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]);
         
         glEnableVertexAttribArray(0);
         
