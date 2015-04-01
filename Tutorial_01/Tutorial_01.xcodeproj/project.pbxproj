@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D51D73881ACC4297008DC6C1 /* T1.vs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D583AC461AC85E250053E847 /* T1.vs */; };
+		D51D73891ACC4297008DC6C1 /* T1.fs in CopyFiles */ = {isa = PBXBuildFile; fileRef = D583AC451AC85E120053E847 /* T1.fs */; };
 		D538848C1AC99F70003048F0 /* glm in Resources */ = {isa = PBXBuildFile; fileRef = D538848B1AC99F70003048F0 /* glm */; };
 		D55133161AC1B251003614C5 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D55133151AC1B251003614C5 /* OpenGL.framework */; };
 		D551331B1AC1B2AB003614C5 /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D551331A1AC1B2AB003614C5 /* libglfw3.a */; };
@@ -22,12 +24,14 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		D558E6901AB1ED680036FE25 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				D51D73881ACC4297008DC6C1 /* T1.vs in CopyFiles */,
+				D51D73891ACC4297008DC6C1 /* T1.fs in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 

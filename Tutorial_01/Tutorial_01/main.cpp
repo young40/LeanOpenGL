@@ -89,6 +89,7 @@ int main(int argc, const char * argv[]) {
 
     
     mat4 Projection = glm::perspective(45.0f, 4.0f/3.0f, 0.1f, 100.0f);
+//    mat4 Projection = glm::ortho(-100, 100, 100, -100)
     
     mat4 View = glm::lookAt(vec3(4, 3, 3),
                             vec3(0, 0, 0),
