@@ -13,6 +13,7 @@
 #include "glfw3.h"
 
 #include "shader.hpp"
+#include "texture.hpp"
 
 #include "../glm/glm.hpp"
 #include "../glm/gtc/matrix_transform.hpp"
@@ -176,7 +177,6 @@ int main(int argc, const char * argv[]) {
     glGenBuffers(1, &colorBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, colorBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_color_buffer_data), g_color_buffer_data, GL_STATIC_DRAW);
-    
     
     
     while (!glfwWindowShouldClose(window)) {

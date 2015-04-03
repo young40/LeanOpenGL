@@ -19,6 +19,16 @@
 		D583AC441AC85DB10053E847 /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D583AC421AC85DB10053E847 /* shader.cpp */; };
 		D583AC481AC85E950053E847 /* T1.vs in Resources */ = {isa = PBXBuildFile; fileRef = D583AC461AC85E250053E847 /* T1.vs */; };
 		D583AC491AC85E950053E847 /* T1.fs in Resources */ = {isa = PBXBuildFile; fileRef = D583AC451AC85E120053E847 /* T1.fs */; };
+		D5F44C741ACD909700ACDF91 /* texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5F44C721ACD909700ACDF91 /* texture.cpp */; };
+		D5F44C7C1ACD91EA00ACDF91 /* GL in Resources */ = {isa = PBXBuildFile; fileRef = D5F44C7B1ACD91EA00ACDF91 /* GL */; };
+		D5F44C7F1ACD928B00ACDF91 /* libGLEWmx.1.12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F44C7D1ACD928B00ACDF91 /* libGLEWmx.1.12.0.dylib */; };
+		D5F44C801ACD928B00ACDF91 /* libGLEW.1.12.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F44C7E1ACD928B00ACDF91 /* libGLEW.1.12.0.dylib */; };
+		D5F44C841ACD948A00ACDF91 /* uvtemplate.bmp in Resources */ = {isa = PBXBuildFile; fileRef = D5F44C811ACD948A00ACDF91 /* uvtemplate.bmp */; };
+		D5F44C851ACD948A00ACDF91 /* uvtemplate.DDS in Resources */ = {isa = PBXBuildFile; fileRef = D5F44C821ACD948A00ACDF91 /* uvtemplate.DDS */; };
+		D5F44C861ACD948A00ACDF91 /* uvtemplate.tga in Resources */ = {isa = PBXBuildFile; fileRef = D5F44C831ACD948A00ACDF91 /* uvtemplate.tga */; };
+		D5F44C871ACD949400ACDF91 /* uvtemplate.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5F44C811ACD948A00ACDF91 /* uvtemplate.bmp */; };
+		D5F44C881ACD949400ACDF91 /* uvtemplate.DDS in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5F44C821ACD948A00ACDF91 /* uvtemplate.DDS */; };
+		D5F44C891ACD949400ACDF91 /* uvtemplate.tga in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5F44C831ACD948A00ACDF91 /* uvtemplate.tga */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +38,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				D5F44C871ACD949400ACDF91 /* uvtemplate.bmp in CopyFiles */,
+				D5F44C881ACD949400ACDF91 /* uvtemplate.DDS in CopyFiles */,
+				D5F44C891ACD949400ACDF91 /* uvtemplate.tga in CopyFiles */,
 				D51D73881ACC4297008DC6C1 /* T1.vs in CopyFiles */,
 				D51D73891ACC4297008DC6C1 /* T1.fs in CopyFiles */,
 			);
@@ -51,6 +64,16 @@
 		D583AC431AC85DB10053E847 /* shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = shader.hpp; sourceTree = "<group>"; };
 		D583AC451AC85E120053E847 /* T1.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = T1.fs; sourceTree = "<group>"; };
 		D583AC461AC85E250053E847 /* T1.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = T1.vs; sourceTree = "<group>"; };
+		D5F44C721ACD909700ACDF91 /* texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = texture.cpp; sourceTree = "<group>"; };
+		D5F44C731ACD909700ACDF91 /* texture.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = texture.hpp; sourceTree = "<group>"; };
+		D5F44C751ACD915300ACDF91 /* libGLEWmx.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEWmx.a; path = "../../../Users/young40/Downloads/glew-1.12.0/lib/libGLEWmx.a"; sourceTree = "<group>"; };
+		D5F44C761ACD915300ACDF91 /* libGLEW.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGLEW.a; path = "../../../Users/young40/Downloads/glew-1.12.0/lib/libGLEW.a"; sourceTree = "<group>"; };
+		D5F44C7B1ACD91EA00ACDF91 /* GL */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GL; path = include/GL; sourceTree = "<group>"; };
+		D5F44C7D1ACD928B00ACDF91 /* libGLEWmx.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEWmx.1.12.0.dylib; path = "../../../Users/young40/Downloads/glew-1.12.0/lib/libGLEWmx.1.12.0.dylib"; sourceTree = "<group>"; };
+		D5F44C7E1ACD928B00ACDF91 /* libGLEW.1.12.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libGLEW.1.12.0.dylib; path = "../../../Users/young40/Downloads/glew-1.12.0/lib/libGLEW.1.12.0.dylib"; sourceTree = "<group>"; };
+		D5F44C811ACD948A00ACDF91 /* uvtemplate.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = uvtemplate.bmp; sourceTree = "<group>"; };
+		D5F44C821ACD948A00ACDF91 /* uvtemplate.DDS */ = {isa = PBXFileReference; lastKnownFileType = file; path = uvtemplate.DDS; sourceTree = "<group>"; };
+		D5F44C831ACD948A00ACDF91 /* uvtemplate.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = uvtemplate.tga; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F44C7F1ACD928B00ACDF91 /* libGLEWmx.1.12.0.dylib in Frameworks */,
+				D5F44C801ACD928B00ACDF91 /* libGLEW.1.12.0.dylib in Frameworks */,
 				D55133251AC1B3BF003614C5 /* CoreVideo.framework in Frameworks */,
 				D55133231AC1B3B4003614C5 /* IOKit.framework in Frameworks */,
 				D55133211AC1B3A9003614C5 /* Cocoa.framework in Frameworks */,
@@ -81,6 +106,16 @@
 		D558E6891AB1ED680036FE25 = {
 			isa = PBXGroup;
 			children = (
+				D5F44C811ACD948A00ACDF91 /* uvtemplate.bmp */,
+				D5F44C821ACD948A00ACDF91 /* uvtemplate.DDS */,
+				D5F44C831ACD948A00ACDF91 /* uvtemplate.tga */,
+				D5F44C7D1ACD928B00ACDF91 /* libGLEWmx.1.12.0.dylib */,
+				D5F44C7E1ACD928B00ACDF91 /* libGLEW.1.12.0.dylib */,
+				D5F44C7B1ACD91EA00ACDF91 /* GL */,
+				D5F44C751ACD915300ACDF91 /* libGLEWmx.a */,
+				D5F44C761ACD915300ACDF91 /* libGLEW.a */,
+				D5F44C721ACD909700ACDF91 /* texture.cpp */,
+				D5F44C731ACD909700ACDF91 /* texture.hpp */,
 				D538848B1AC99F70003048F0 /* glm */,
 				D583AC461AC85E250053E847 /* T1.vs */,
 				D583AC451AC85E120053E847 /* T1.fs */,
@@ -171,7 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F44C841ACD948A00ACDF91 /* uvtemplate.bmp in Resources */,
 				D538848C1AC99F70003048F0 /* glm in Resources */,
+				D5F44C851ACD948A00ACDF91 /* uvtemplate.DDS in Resources */,
+				D5F44C7C1ACD91EA00ACDF91 /* GL in Resources */,
+				D5F44C861ACD948A00ACDF91 /* uvtemplate.tga in Resources */,
 				D583AC481AC85E950053E847 /* T1.vs in Resources */,
 				D583AC491AC85E950053E847 /* T1.fs in Resources */,
 			);
@@ -184,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F44C741ACD909700ACDF91 /* texture.cpp in Sources */,
 				D583AC441AC85DB10053E847 /* shader.cpp in Sources */,
 				D558E6961AB1ED680036FE25 /* main.cpp in Sources */,
 			);
@@ -269,10 +309,16 @@
 		D558E69A1AB1ED680036FE25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/young40/Downloads/glfw-3.1.1/build/src",
 					"$(PROJECT_DIR)",
+					"/Users/young40/Downloads/glew-1.12.0/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -281,10 +327,16 @@
 		D558E69B1AB1ED680036FE25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					./,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"/Users/young40/Downloads/glfw-3.1.1/build/src",
 					"$(PROJECT_DIR)",
+					"/Users/young40/Downloads/glew-1.12.0/lib",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
