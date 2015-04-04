@@ -16,6 +16,7 @@
 		D5651E231AD03C1F0010F492 /* Test.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5651E201AD03BD60010F492 /* Test.vsh */; };
 		D5651E241AD03C1F0010F492 /* Test.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5651E1F1AD03BB90010F492 /* Test.fsh */; };
 		D5DA165C1AD03EFC006A858C /* shader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5DA165A1AD03EFB006A858C /* shader.cpp */; };
+		D5DA165E1AD0432F006A858C /* uvtemplate.bmp in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5DA165D1AD04317006A858C /* uvtemplate.bmp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				D5DA165E1AD0432F006A858C /* uvtemplate.bmp in CopyFiles */,
 				D5651E231AD03C1F0010F492 /* Test.vsh in CopyFiles */,
 				D5651E241AD03C1F0010F492 /* Test.fsh in CopyFiles */,
 			);
@@ -44,6 +46,7 @@
 		D5651E201AD03BD60010F492 /* Test.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Test.vsh; sourceTree = "<group>"; };
 		D5DA165A1AD03EFB006A858C /* shader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = shader.cpp; path = ../includes/common/shader.cpp; sourceTree = "<group>"; };
 		D5DA165B1AD03EFB006A858C /* shader.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = shader.hpp; path = ../includes/common/shader.hpp; sourceTree = "<group>"; };
+		D5DA165D1AD04317006A858C /* uvtemplate.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = uvtemplate.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +68,7 @@
 		D5651DF91AD022920010F492 = {
 			isa = PBXGroup;
 			children = (
+				D5DA165D1AD04317006A858C /* uvtemplate.bmp */,
 				D5DA165A1AD03EFB006A858C /* shader.cpp */,
 				D5DA165B1AD03EFB006A858C /* shader.hpp */,
 				D5651E201AD03BD60010F492 /* Test.vsh */,
