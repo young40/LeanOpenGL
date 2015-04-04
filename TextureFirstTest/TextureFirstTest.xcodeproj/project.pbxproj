@@ -13,17 +13,21 @@
 		D5651E161AD02A870010F492 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5651E151AD02A870010F492 /* IOKit.framework */; };
 		D5651E181AD02A930010F492 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5651E171AD02A930010F492 /* Cocoa.framework */; };
 		D5651E1A1AD02AA50010F492 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5651E191AD02AA50010F492 /* CoreVideo.framework */; };
+		D5651E231AD03C1F0010F492 /* Test.vsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5651E201AD03BD60010F492 /* Test.vsh */; };
+		D5651E241AD03C1F0010F492 /* Test.fsh in CopyFiles */ = {isa = PBXBuildFile; fileRef = D5651E1F1AD03BB90010F492 /* Test.fsh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		D5651E001AD022920010F492 /* CopyFiles */ = {
+		D5651E221AD03C160010F492 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				D5651E231AD03C1F0010F492 /* Test.vsh in CopyFiles */,
+				D5651E241AD03C1F0010F492 /* Test.fsh in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -35,6 +39,8 @@
 		D5651E151AD02A870010F492 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		D5651E171AD02A930010F492 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D5651E191AD02AA50010F492 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		D5651E1F1AD03BB90010F492 /* Test.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Test.fsh; sourceTree = "<group>"; };
+		D5651E201AD03BD60010F492 /* Test.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Test.vsh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		D5651DF91AD022920010F492 = {
 			isa = PBXGroup;
 			children = (
+				D5651E201AD03BD60010F492 /* Test.vsh */,
+				D5651E1F1AD03BB90010F492 /* Test.fsh */,
 				D5651E191AD02AA50010F492 /* CoreVideo.framework */,
 				D5651E171AD02A930010F492 /* Cocoa.framework */,
 				D5651E151AD02A870010F492 /* IOKit.framework */,
@@ -91,7 +99,7 @@
 			buildPhases = (
 				D5651DFE1AD022920010F492 /* Sources */,
 				D5651DFF1AD022920010F492 /* Frameworks */,
-				D5651E001AD022920010F492 /* CopyFiles */,
+				D5651E221AD03C160010F492 /* CopyFiles */,
 			);
 			buildRules = (
 			);
