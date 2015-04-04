@@ -7,8 +7,14 @@
 //
 
 #include <iostream>
+#include <GLFW/glfw3.h>
 
 int main(int argc, const char * argv[]) {
+    
+    if (!glfwInit()) {
+        
+        return -1;
+    }
     // insert code here...
     std::cout << "Hello, World!\n";
     return 0;
