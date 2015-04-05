@@ -7,6 +7,7 @@
 //
 
 #include <iostream>
+#include <math.h>
 
 #include <OpenGL/gl3.h>
 #include <GLFW/glfw3.h>
@@ -79,11 +80,20 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, uvBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_uv_buffer_data), g_uv_buffer_data, GL_STATIC_DRAW);
     
+    GLuint gScaleLocation = glGetUniformLocation(programID, "gScale");
+    
+    static float gScale = 0.0f;
+    
+    
     
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         
         glUseProgram(programID);
+        
+        gScale += 0.01f;
+        
+        glUniform1f(gScaleLocation, sin(gScale));
         
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE, texture);
