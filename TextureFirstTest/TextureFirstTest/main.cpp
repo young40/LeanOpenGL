@@ -90,15 +90,6 @@ int main(int argc, const char * argv[]) {
     
     mat4 World = mat4(0.0f);
     
-    World[0][0] = 1.0f;
-    World[1][1] = 1.0f;
-    World[2][2] = 1.0f;
-    World[3][3] = 1.0f;
-    
-    World[0][3] = sinf(gScale);
-    
-    
-    
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         
@@ -106,7 +97,10 @@ int main(int argc, const char * argv[]) {
         
         gScale += 0.01f;
         
-        World[0][3] = sinf(gScale);
+        World[0][0] = sinf(gScale);
+        World[1][1] = sinf(gScale);
+        World[2][2] = sinf(gScale);
+        World[3][3] = 1.0f;
         
         glUniformMatrix4fv(gWorldLocation, 1, GL_TRUE, &World[0][0]);
         
