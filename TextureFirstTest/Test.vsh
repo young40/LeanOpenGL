@@ -5,14 +5,11 @@ layout(location = 1) in vec2 vertexUV;
 
 out vec2 UV;
 
-uniform float gScale;
+uniform mat4 gWorld;
 
 void main()
 {
-    gl_Position.xyz = vec3(gScale*vertexPosition_modelspace.x,
-                           gScale*vertexPosition_modelspace.y,
-                           gScale*vertexPosition_modelspace.z); //vertexPosition_modelspace;
-    gl_Position.w = 1.0;
+    gl_Position = gWorld * vec4(vertexPosition_modelspace, 1.0f);
     
     UV = vertexUV;
 }

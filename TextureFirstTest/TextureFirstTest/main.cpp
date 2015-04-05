@@ -12,6 +12,8 @@
 #include <OpenGL/gl3.h>
 #include <GLFW/glfw3.h>
 
+#include <glm/glm.hpp>
+
 #include <common/texture.hpp>
 #include <common/shader.hpp>
 
@@ -21,6 +23,8 @@ extern "C"
         fprintf(stderr, "OpenGL Error: %d\t %s\n", error, desc);
     }
 }
+
+using namespace glm;
 
 int main(int argc, const char * argv[]) {
     if (!glfwInit()) {
@@ -80,9 +84,18 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, uvBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_uv_buffer_data), g_uv_buffer_data, GL_STATIC_DRAW);
     
-    GLuint gScaleLocation = glGetUniformLocation(programID, "gScale");
+    GLuint gWorldLocation = glGetUniformLocation(programID, "gWorld");
     
     static float gScale = 0.0f;
+    
+    mat4 World = mat4(0.0f);
+    
+    World[0][0] = 1.0f;
+    World[1][1] = 1.0f;
+    World[2][2] = 1.0f;
+    World[3][3] = 1.0f;
+    
+    World[0][3] = sinf(gScale);
     
     
     
@@ -93,7 +106,10 @@ int main(int argc, const char * argv[]) {
         
         gScale += 0.01f;
         
-        glUniform1f(gScaleLocation, sin(gScale));
+        World[0][3] = sinf(gScale);
+        
+        glUniformMatrix4fv(gWorldLocation, 1, GL_TRUE, &World[0][0]);
+        
         
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE, texture);
