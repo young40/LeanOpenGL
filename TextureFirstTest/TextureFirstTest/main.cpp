@@ -16,6 +16,7 @@
 
 #include <common/texture.hpp>
 #include <common/shader.hpp>
+#include <common/controls.hpp>
 
 extern "C"
 {
@@ -41,7 +42,7 @@ int main(int argc, const char * argv[]) {
     
     glfwWindowHint(GLFW_SAMPLES, 4);
     
-    GLFWwindow *window = glfwCreateWindow(640, 480, "Hello Texture", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(1024, 768, "Hello Texture", nullptr, nullptr);
     
     if (!window) {
         glfwTerminate();
@@ -49,6 +50,9 @@ int main(int argc, const char * argv[]) {
     }
     
     glfwMakeContextCurrent(window);
+    
+    glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
+//    glfwSetCursorPos(window, 1024/2, 768/2);
     
     glClearColor(0.3f, 0.2f, 0.4f, 0.0f);
     
@@ -84,25 +88,24 @@ int main(int argc, const char * argv[]) {
     glBindBuffer(GL_ARRAY_BUFFER, uvBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_uv_buffer_data), g_uv_buffer_data, GL_STATIC_DRAW);
     
-    GLuint gWorldLocation = glGetUniformLocation(programID, "gWorld");
+    GLuint MatrixID = glGetUniformLocation(programID, "MVP");
     
-    static float gScale = 0.0f;
     
-    mat4 World = mat4(0.0f);
-    
-    while (!glfwWindowShouldClose(window)) {
+    while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
+           !glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         
         glUseProgram(programID);
         
-        gScale += 0.01f;
+        computeMatricesFromInputs(window);
         
-        World[0][0] = sinf(gScale);
-        World[1][1] = sinf(gScale);
-        World[2][2] = sinf(gScale);
-        World[3][3] = 1.0f;
+        mat4 ProjectionMatrix = getProjectionMatrix();
+        mat4 ViewMatrix = getViewMatrix();
+        mat4 ModelMatrix = mat4(1.0f);
         
-        glUniformMatrix4fv(gWorldLocation, 1, GL_TRUE, &World[0][0]);
+        mat4 MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+        
+        glUniformMatrix4fv(MatrixID, 1, GL_TRUE, &MVP[0][0]);
         
         
         glActiveTexture(GL_TEXTURE0);

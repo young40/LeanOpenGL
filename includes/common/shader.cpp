@@ -9,7 +9,7 @@ using namespace std;
 #include <stdlib.h>
 #include <string.h>
 
-#include <GL/glew.h>
+#include <OpenGL/gl3.h>
 
 #include "shader.hpp"
 
