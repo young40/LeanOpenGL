@@ -64,12 +64,26 @@ int main(int argc, const char * argv[]) {
         -0.9f,  -0.9f,  0.0f,
         0.9f,   -0.9f,  0.0f,
         0.0f,   0.9f,   0.0f,
+        0.0f,   0.0f,   0.7f,
     };
     
     GLuint vertexBuffer;
     glGenBuffers(1, &vertexBuffer);
     glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
     glBufferData(GL_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_buffer_data, GL_STATIC_DRAW);
+    
+    static const GLuint g_vertex_index[] = {
+        0, 1, 2,
+        0, 1, 3,
+        1, 2, 3,
+        2, 0, 3
+    };
+    
+    GLuint elementBuffer;
+    glGenBuffers(1, &elementBuffer);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffer);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(g_vertex_buffer_data), g_vertex_index, GL_STATIC_DRAW);
+    
     
     
     GLuint programID = LoadShaders("Test.vsh", "Test.fsh");
@@ -113,7 +127,7 @@ int main(int argc, const char * argv[]) {
         glUniform1i(textureID, 0);
         
         glEnableVertexAttribArray(0);
-        glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, elementBuffer);
         glVertexAttribPointer(
                               0,
                               3,
@@ -132,7 +146,11 @@ int main(int argc, const char * argv[]) {
                               (void*)0);
         
         
-        glDrawArrays(GL_TRIANGLES, 0, 3);
+//        glDrawArrays(GL_TRIANGLES, 0, 3);
+        
+        glBindBuffer(GL_ARRAY_BUFFER, vertexBuffer);
+        glDrawElements(GL_TRIANGLES, sizeof(g_vertex_index), GL_UNSIGNED_INT, (void*)0);
+        
         
         glDisableVertexAttribArray(0);
         glDisableVertexAttribArray(1);
