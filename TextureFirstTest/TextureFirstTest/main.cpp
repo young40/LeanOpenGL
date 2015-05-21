@@ -23,6 +23,14 @@ extern "C"
     static void test_error_callback(int error, const char *desc) {
         fprintf(stderr, "OpenGL Error: %d\t %s\n", error, desc);
     }
+    
+    static void scroll_callback(GLFWwindow *window, double x, double y) {
+        fprintf(stdout, "%f %f\n", x, y);
+    }
+    
+    static void mouse_callback(GLFWwindow *window, int button, int action, int mods) {
+        
+    }
 }
 
 using namespace glm;
@@ -42,7 +50,7 @@ int main(int argc, const char * argv[]) {
     
     glfwWindowHint(GLFW_SAMPLES, 4);
     
-    GLFWwindow *window = glfwCreateWindow(1024, 768, "Hello Texture", nullptr, nullptr);
+    GLFWwindow *window = glfwCreateWindow(800, 800, "Hello Texture", nullptr, nullptr);
     
     if (!window) {
         glfwTerminate();
@@ -50,6 +58,8 @@ int main(int argc, const char * argv[]) {
     }
     
     glfwMakeContextCurrent(window);
+    
+    glfwSetScrollCallback(window, scroll_callback);
     
     glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
 //    glfwSetCursorPos(window, 1024/2, 768/2);
