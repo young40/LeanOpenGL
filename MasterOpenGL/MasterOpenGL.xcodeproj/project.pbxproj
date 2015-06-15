@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5AAAAEB1B2F1AFD00914C58 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AAAAEA1B2F1AFD00914C58 /* main.cpp */; };
+		D5AAAAEB1B2F1AFD00914C58 /* MasterOpenGL01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5AAAAEA1B2F1AFD00914C58 /* MasterOpenGL01.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +23,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D5AAAAE71B2F1AFD00914C58 /* MasterOpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MasterOpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5AAAAEA1B2F1AFD00914C58 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D5AAAAE71B2F1AFD00914C58 /* MasterOpenGL01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MasterOpenGL01; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5AAAAEA1B2F1AFD00914C58 /* MasterOpenGL01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MasterOpenGL01.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,7 +49,7 @@
 		D5AAAAE81B2F1AFD00914C58 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D5AAAAE71B2F1AFD00914C58 /* MasterOpenGL */,
+				D5AAAAE71B2F1AFD00914C58 /* MasterOpenGL01 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,7 +57,7 @@
 		D5AAAAE91B2F1AFD00914C58 /* MasterOpenGL */ = {
 			isa = PBXGroup;
 			children = (
-				D5AAAAEA1B2F1AFD00914C58 /* main.cpp */,
+				D5AAAAEA1B2F1AFD00914C58 /* MasterOpenGL01.cpp */,
 			);
 			path = MasterOpenGL;
 			sourceTree = "<group>";
@@ -65,9 +65,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D5AAAAE61B2F1AFD00914C58 /* MasterOpenGL */ = {
+		D5AAAAE61B2F1AFD00914C58 /* MasterOpenGL01 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D5AAAAEE1B2F1AFD00914C58 /* Build configuration list for PBXNativeTarget "MasterOpenGL" */;
+			buildConfigurationList = D5AAAAEE1B2F1AFD00914C58 /* Build configuration list for PBXNativeTarget "MasterOpenGL01" */;
 			buildPhases = (
 				D5AAAAE31B2F1AFD00914C58 /* Sources */,
 				D5AAAAE41B2F1AFD00914C58 /* Frameworks */,
@@ -77,9 +77,9 @@
 			);
 			dependencies = (
 			);
-			name = MasterOpenGL;
+			name = MasterOpenGL01;
 			productName = MasterOpenGL;
-			productReference = D5AAAAE71B2F1AFD00914C58 /* MasterOpenGL */;
+			productReference = D5AAAAE71B2F1AFD00914C58 /* MasterOpenGL01 */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D5AAAAE61B2F1AFD00914C58 /* MasterOpenGL */,
+				D5AAAAE61B2F1AFD00914C58 /* MasterOpenGL01 */,
 			);
 		};
 /* End PBXProject section */
@@ -118,7 +118,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5AAAAEB1B2F1AFD00914C58 /* main.cpp in Sources */,
+				D5AAAAEB1B2F1AFD00914C58 /* MasterOpenGL01.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,13 +228,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D5AAAAEE1B2F1AFD00914C58 /* Build configuration list for PBXNativeTarget "MasterOpenGL" */ = {
+		D5AAAAEE1B2F1AFD00914C58 /* Build configuration list for PBXNativeTarget "MasterOpenGL01" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D5AAAAEF1B2F1AFD00914C58 /* Debug */,
 				D5AAAAF01B2F1AFD00914C58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
