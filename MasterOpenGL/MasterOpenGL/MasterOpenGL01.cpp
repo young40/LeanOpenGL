@@ -31,6 +31,8 @@ int main(int argc, const char * argv[])
     
     glfwMakeContextCurrent(window);
     
+    std::cout << glGetString(GL_VERSION) << std::endl;
+    
     while (!glfwWindowShouldClose(window))
     {
         glfwPollEvents();
