@@ -9,8 +9,33 @@
 
 #include <iostream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include <GLFW/glfw3.h>
+
+int main(int argc, const char * argv[])
+{
+    GLFWwindow* window;
+    
+    if (!glfwInit())
+    {
+        return -1;
+    }
+    
+
+    window = glfwCreateWindow(960, 640, "First Window for OpenGL", nullptr, nullptr);
+    
+    if (!window)
+    {
+        glfwTerminate();
+        return -1;
+    }
+    
+    glfwMakeContextCurrent(window);
+    
+    while (!glfwWindowShouldClose(window))
+    {
+        glfwPollEvents();
+    }
+    
+    glfwTerminate();
     return 0;
 }
